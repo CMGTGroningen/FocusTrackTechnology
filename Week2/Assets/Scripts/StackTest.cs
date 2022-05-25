@@ -26,7 +26,6 @@ public class StackTest : MonoBehaviour
 
             // TODO: place newItem on the stack
             // ...
-            myStack.Push(newItem);
 
             numCreated++;
         }
@@ -35,7 +34,6 @@ public class StackTest : MonoBehaviour
             // TODO: if there are items on the stack
             // TODO: remove and destroy the top item from the stack
             // ...
-            Destroy(myStack.Pop());
         }
     }
 }

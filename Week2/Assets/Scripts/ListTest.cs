@@ -52,14 +52,6 @@ public class ListTest : MonoBehaviour
     void Start()
     {
         TestItemArray();
-
-        itemStack.Push("test1");
-        itemStack.Push("test2");
-        itemStack.Push("test3");
-
-        itemQueue.Enqueue(itemStack.Pop());
-        itemQueue.Enqueue(itemStack.Pop());
-        itemQueue.Enqueue(itemStack.Pop());
     }
 
     // Update is called once per frame
