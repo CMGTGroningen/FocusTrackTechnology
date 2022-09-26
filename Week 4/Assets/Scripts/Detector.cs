@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Detector : MonoBehaviour
 {
-    private Quaternion targetRotation;
+    private Quaternion endRotation;
+    private Quaternion startRotation;
+    private float time;
 
     // Start is called before the first frame update
     void Start()
@@ -14,12 +16,14 @@ public class Detector : MonoBehaviour
 
     public void RotateTowards(Quaternion target)
     {
-        targetRotation = target;
+        startRotation = transform.rotation;
+        endRotation = target;
+        time = 0.0f;
     }
 
     // Update is called once per frame
     void Update()
-    {
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 0.02f);
+    {      
+        time += Time.deltaTime;
     }
 }

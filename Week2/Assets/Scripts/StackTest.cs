@@ -25,7 +25,7 @@ public class StackTest : MonoBehaviour
             newItem.name = "item: " + numCreated.ToString();
 
             // TODO: place newItem on the stack
-            // ...
+            myStack.Push(newItem);
 
             numCreated++;
         }
@@ -33,7 +33,11 @@ public class StackTest : MonoBehaviour
         {
             // TODO: if there are items on the stack
             // TODO: remove and destroy the top item from the stack
-            // ...
+            if (myStack.Count > 0)
+            {
+                GameObject item = myStack.Pop();
+                Destroy(item);
+            }
         }
     }
 }
